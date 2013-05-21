@@ -17,7 +17,6 @@
 		039285BC14CCD40500D02672 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 039285BA14CCD40500D02672 /* Credits.rtf */; };
 		039285BF14CCD40500D02672 /* SNRHUDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285BE14CCD40500D02672 /* SNRHUDAppDelegate.m */; };
 		039285C214CCD40500D02672 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 039285C014CCD40500D02672 /* MainMenu.xib */; };
-		039285C614CCD42000D02672 /* SNRHUDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392857D14CCCBF300D02672 /* SNRHUDKit.framework */; };
 		039285CA14CCD43D00D02672 /* SNRHUDKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0392857D14CCCBF300D02672 /* SNRHUDKit.framework */; };
 		039285CE14CCE82700D02672 /* NSBezierPath+MCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285CC14CCE82700D02672 /* NSBezierPath+MCAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		039285CF14CCE82700D02672 /* NSBezierPath+MCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285CD14CCE82700D02672 /* NSBezierPath+MCAdditions.m */; };
@@ -33,6 +32,7 @@
 		039285EE14CE0B8600D02672 /* SNRHUDScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285EC14CE0B8500D02672 /* SNRHUDScrollView.m */; };
 		039285F114CE0C1100D02672 /* SNRHUDImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285EF14CE0C1000D02672 /* SNRHUDImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		039285F214CE0C1100D02672 /* SNRHUDImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285F014CE0C1000D02672 /* SNRHUDImageCell.m */; };
+		7B8226BC171F2F19002AAD9C /* AtoZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8226BB171F2F18002AAD9C /* AtoZ.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +92,7 @@
 		039285EC14CE0B8500D02672 /* SNRHUDScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDScrollView.m; path = Classes/SNRHUDScrollView.m; sourceTree = "<group>"; };
 		039285EF14CE0C1000D02672 /* SNRHUDImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDImageCell.h; path = Classes/SNRHUDImageCell.h; sourceTree = "<group>"; };
 		039285F014CE0C1000D02672 /* SNRHUDImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDImageCell.m; path = Classes/SNRHUDImageCell.m; sourceTree = "<group>"; };
+		7B8226BB171F2F18002AAD9C /* AtoZ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AtoZ.framework; path = "../../../../../../Users/localadmin/Library/Developer/Xcode/DerivedData/AtoZ-hfqteqfcvjfinlajqwkydsqyzpiz/Build/Products/Debug/AtoZ.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				039285C614CCD42000D02672 /* SNRHUDKit.framework in Frameworks */,
+				7B8226BC171F2F19002AAD9C /* AtoZ.framework in Frameworks */,
 				039285B014CCD40500D02672 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +119,7 @@
 		0392857114CCCBF300D02672 = {
 			isa = PBXGroup;
 			children = (
+				7B8226BB171F2F18002AAD9C /* AtoZ.framework */,
 				0392858614CCCBF300D02672 /* SNRHUDKit */,
 				039285B114CCD40500D02672 /* Catalog (Sample App) */,
 				0392857F14CCCBF300D02672 /* Frameworks */,
@@ -478,6 +480,10 @@
 		039285C414CCD40500D02672 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Catalog/Catalog-Prefix.pch";
 				INFOPLIST_FILE = "Catalog/Catalog-Info.plist";
@@ -489,6 +495,10 @@
 		039285C514CCD40500D02672 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Catalog/Catalog-Prefix.pch";
 				INFOPLIST_FILE = "Catalog/Catalog-Info.plist";
